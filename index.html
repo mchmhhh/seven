@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            margin: 0 auto;
+        }
+        [class$="box"]{
+            height: 60px;
+            text-align: center;
+            color: white;
+            line-height: 30px;
+        }
+        .first-box{
+            background: red;
+        }
+        .second-box{
+            background: blue;
+        }
+        .third-box{
+            background:black;
+        }
+        .fourth-box{
+            background: orange;
+        }
+
+        @media  screen and (min-width: 1200px) {
+            #container{
+                width: 1200px;
+            }
+
+            [class$="box"]{
+                width: 300px;
+                float: left;
+            }
+        }
+
+        @media screen and (min-width:992px) and (max-width:1200px){
+            #container{
+                width: 993px;
+            }
+
+            .first-box{
+                width: 100%;
+                float: none;
+                clear: both;
+            }
+
+            .second-box{
+                width: 331px;
+                float: left;
+            }
+
+            .third-box{
+                width: 331px;
+                float: left;
+            }
+
+            .fourth-box{
+                width: 331px;
+                float: left;
+            }
+        }
+
+        @media  screen and (min-width:768px) and (max-width:992px){
+            #container{
+                width: 768px;
+            }
+
+            .first-box{
+                width: 50%;
+                float: left;
+            }
+
+            .second-box{
+                width: 50%;
+                float: left;
+            }
+
+            .third-box{
+                width: 50%;
+                float: left;
+            }
+
+            .fourth-box{
+                width: 50%;
+                float: left;
+            }
+            
+        }
+
+        @media  screen and (max-width:768px) {
+            #container{
+                width: 100%;
+            }
+
+            [class$="box"]{
+                width: 100%;
+                float: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="first-box">
+            <p>1</p>
+        </div>
+        <div class="second-box">
+            <p>2</p>
+        </div>
+        <div class="third-box">
+            <p>3</p>
+        </div>
+        <div class="fourth-box">
+            <p>4</p>
+        </div>
+    </div>
+</body>
+</html>
